@@ -1,0 +1,57 @@
+ Demand Management & Planning
+• MD61 – Create Planned Independent Requirements (PIRs)
+• MD62 / MD63 – Change / Display PIRs
+• MD04 – Stock / Requirements List (your go-to screen for MRP behavior)
+• MD74 / MD75 – Delete old PIRs
+• MD81 / MD82 – Copy or adjust PIR Versions
+
+💡 Consultant Tip: Always start your investigation with MD04 — it tells you what MRP “thinks” is needed and why.
+
+🏭 2. Material Requirements Planning (MRP)
+• MD01N – Total Planning (MRP Live Plant-wise MRP)
+• MD02 – Single-item, Multi-level MRP
+• MD03 – Single-item, Single-level MRP
+• MD05 – Display MRP List
+• MD06 / MD07 – Evaluate MRP Lists (by planner / material)
+• MD09 – BOM Explosion for MRP element
+
+📊 MRP Evaluation Reports
+• MDLD – Display MRP list (collective)
+• MD4C – Multi-level Pegging (trace supply-demand link)
+• MDVP – Evaluation of Planning File Entries
+• MC$6 – MRP Performance Evaluation (Info Structure S076)
+• MC$G – MRP Element Analysis
+
+💡 Consultant Tip: MD04 solves 90% of “Why did MRP plan this?” cases.
+
+🧩 3. Bill of Materials (BOM) & Routing
+• CS01 / CS02 / CS03 – Create / Change / Display BOM
+• CS11 / CS12 / CS13 – BOM Explosion (Single / Multi-level)
+• CA01 / CA02 / CA03 – Create / Change / Display Routing
+• CA51 / CA52 / CA53 – Reference Operation Sets
+• CS20 / CS21 – Mass Change / Where-used in BOM
+
+💡 Pro Insight: Use CS11 before MRP runs — if the explosion isn’t right here, it won’t be right in MD02 either.
+
+📦 4. Production Orders & Execution
+• CO01 / CO02 / CO03 – Create / Change / Display Production Orders
+• COHV – Mass Processing of Orders
+• CO11N / CO15 – Confirm Production Orders
+• MB31 / MIGO – Goods Receipt against Order
+• MF47 – Repetitive Manufacturing Backflush
+
+💡 Hidden Gem: COHV lets you release, print, and technically complete multiple orders at once — a time-saver in shop-floor-heavy industries.
+
+📊 5. Reporting & Monitoring
+• COOIS / COOISPI – Order Information System
+• MD04 – Live Stock / Requirement Overview
+• MB52 – Stock Overview by Material / Plant
+• S_P00_07000139 – Production Order List
+• MB51 – Material Document Report
+• MC$6 / MC$G – MRP Analysis Reports
+
+💡 Consultant Tip: Combine COOIS + MD04 + MB52 — together they give a full snapshot of material, order, and stock alignment.
+
+📌 In short:
+A strong PP consultant doesn’t just “know” tcodes — they connect them logically.
+MD04 shows demand flow, MD02 explains planning logic, COOIS tracks execution, and MC$6 validates MRP performance.
