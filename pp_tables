@@ -1,0 +1,42 @@
+
+1. Master Data Tables
+MARA: Stores general material data for all materials in the system.
+MARC: Holds plant-specific material data, including MRP views.
+MAKT: Contains material descriptions in different languages.
+CRHD: Work center header data, which defines the work center.
+CRCA: Work center capacity allocation details.
+CRAT: Work center descriptions.
+STKO: BOM header data for a material.
+STPO: BOM item details for components in the BOM.
+PLKO: Routing header data for a material.
+PLPO: Routing operation details.
+MAPL: Links task lists (routing) to materials.
+
+2. Demand Management & Planning
+PBIM: Stores independent requirements for a material.
+PBED: Contains detailed data for independent requirements.
+MDVM: MRP area data for materials.
+MDKP: Header data for MRP documents created during planning.
+MDTB: MRP table that stores planning results.
+MDLV: Parameters for MRP areas.
+
+3. Production Orders
+AUFK: Order master data for all types of orders.
+AFKO: Header data for production orders.
+AFPO: Item-level data for production orders.
+AFVC: Operation details within a production order.
+AFVV: Values related to operations in an order (like quantities, times).
+RESB: Reservation data for dependent requirements.
+COHV: Used for mass processing of production orders.
+
+4. Capacity Planning
+KBED: Capacity requirements records for work centers.
+KAKO: Capacity header segment data.
+KAPE: Capacity planning data for work centers.
+S024: Capacity planning statistics.
+
+5. Shop Floor Control
+AFRU: Stores confirmation data for production orders.
+AFVC: Operation details (also used in shop floor control).
+AFVV: Operation values like actual times and quantities.
+CATSDB: Time sheet data if integrated with HR for labor confirmations.
