@@ -37,3 +37,44 @@ In S/4HANA, several tables have been simplified or replaced:
 ↳ MATDOC_EXTRACT → summary extract table for analytics
 ↳ ACDOCA → Universal Journal for all accounting entries
 ↳ EINE/EINA still exist but are integrated into new data models
+================================================================================================================================
+P-037 | Material Master Tables & Standard Reports in SAP
+Every SAP consultant knows MM01, MM02, MM03 — but true mastery comes from understanding how Material Master data is stored, linked, and reported.
+Whether you’re in PP, MM, QM, or PM — knowing these tables and standard reports can save hours of debugging and analysis time 👇
+
+⚡ Core Material Master Tables
+ • MARA – General Material Data (Base table for every material).
+ • MAKT – Material Descriptions (Language-dependent text).
+ • MBEW – Valuation Data (Accounting view: stock, price, valuation class).
+ • MARC – Plant Data for Material (MRP, production, and procurement info).
+ • MVKE – Sales Data for Material (sales org + distribution channel).
+ • MLAN – Tax Classification Data.
+ • MARD – Storage Location Data (stock levels per SLOC).
+ • MARM – Unit of Measure Data.
+ • MAPR – Forecast Parameters.
+ • MVER – Consumption Data.
+ • MBEWH / MARDH – Historical valuation & storage data tables (useful for audit trails).
+
+⚡ Material Master Views by Application Area
+ • Basic Data → MARA, MAKT
+ • MRP → MARC, MDMA, MDTB
+ • Work Scheduling / PP → MARC, MAST (BOM link), MAPL (Routing link)
+ • Accounting → MBEW
+ • Costing → CKIS, CKIT, MBEW
+ • Storage → MARD, MCHB (Batch), MSSL (Special stock)
+ • Sales → MVKE, KNMT (Material-Condition link)
+
+⚡ Standard Reports for Material Master Analysis
+ • MM60 – List of Materials (Basic overview).
+ • MMBE – Stock Overview by plant, SLOC, batch.
+ • MB52 – List of warehouse stocks.
+ • MB5B – Stock at key date (valuation-related).
+ • MC.9 – Material analysis (usage and movement trends).
+ • MB51 – Material document list (goods movement history).
+ • MB5T – Stock in transit report.
+ • MB5L – Valuated stock list by G/L account.
+ • MB54 – Consignment stock report.
+ • MB58 – Stocks for subcontracting.
+
+⚡ Pro Tip
+ Use SE16N / SE11 to explore table relationships. Start with MARA → MARC → MBEW → MARD → join with MAKT for descriptions.
